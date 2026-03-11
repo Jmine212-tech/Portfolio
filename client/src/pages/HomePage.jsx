@@ -32,47 +32,51 @@ const HomePage = () => {
                         <p className='italic font-serif text-4xl'>- I', JMine212 -</p>
                     </section>
                     <section
-                        className='ProfileImg w-50 h-50 bg-white rounded-4xl absolute -bottom-12 border-3 border-pink-500'></section>
+                        className='ProfileImg w-50 h-50 rounded-4xl absolute -bottom-12 border-3 border-pink-500
+                        flex items-center justify-center bg-linear-to-b from-white to-stone-400'>
+                            <h1 className='text-9xl text-black font-bold font-serif'>J</h1>
+                        </section>
                 </article>
 
                 <article
-                    className='IntroBox border rounded-2xl p-4 mt-20 bg-base-300'>
-                    <h1 className='text-center text-2xl font-bold'>Hello, I’m **Jmine212** 👋</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m a <i className='font-semibold'> ** Junior Full-Stack Web Developer ** </i>
+                    className='IntroBox p-4 mt-20'>
+                    <h1 className='text-center text-2xl font-bold bg-base-300 pt-4 pb-4 rounded-2xl mb-2'>Hello, I’m **Jmine212** 👋</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        I’m a <i className='font-semibold'> ** Junior Full-Stack Web Developer ** </i>
                         who enjoys building modern and user-friendly web applications.
                         I focus on creating clean interfaces on the frontend and reliable
                         systems on the backend.</p>
+                    <div
+                        className='mt-4'>
+                        <h1 className='text-center text-2xl font-bold'>💻 **My Skills**</h1>
+                        <div className='flex justify-between pl-4 pr-4 mt-4'>
+                            <span className='border p-2 rounded-box bg-base-300'>
+                                <h3 className='text-xl font-semibold mb-2'>**Frontend**</h3>
+                                <p>* React</p>
+                                <p>* Tailwind CSS</p>
+                            </span>
+                            <span className='border p-2 rounded-box bg-base-300'>
+                                <h3 className='text-xl font-semibold mb-2'>**Backend**</h3>
+                                <p>* Node.js</p>
+                                <p>* Express</p>
+                                <p>* JavaScript</p>
+                            </span>
+                        </div>
+                        <div className='border p-2 rounded-box bg-base-300 text-center mt-4'>
+                                <h3 className='text-xl font-semibold mb-2'>**Database**</h3>
+                                <p>* MongoDB</p>
+                            </div>
 
-                    <div>
-                        <h1>💻 **My Skills**</h1>
-                        <span>
-                            <h3>**Frontend**</h3>
-
-                            <p>* React</p>
-                            <p>* Tailwind CSS</p>
-                        </span>
-
-                        <span>
-                            <h3>**Backend**</h3>
-                            <p>* Node.js</p>
-                            <p>* Express</p>
-                            <p>* JavaScript</p>
-                        </span>
-
-                        <span>
-                            <h3>**Database**</h3>
-                            <p>* MongoDB</p>
-                        </span>
-
-                        <span>
-                            <h3>🌏 **Languages**</h3>
+                        <div className='border mt-4 text-center bg-base-300'>
+                            <h3 className='font-semibold mb-2'>🌏 **Languages**</h3>
                             <p>* Shan (Tai)</p>
                             <p>* Thai</p>
                             <p>* English (B1–B2)</p>
                             <p>* Burmese</p>
-                        </span>
+                        </div>
 
-                        <p>I’m passionate about learning new technologies and improving
+                        <p className='mt-4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            I’m passionate about learning new technologies and improving
                             my development skills every day. My goal is to build useful, scalable,
                             and well-designed web applications.</p>
                         <p>Feel free to explore my projects and see what I’ve been working on.</p>
@@ -80,14 +84,14 @@ const HomePage = () => {
                 </article>
 
                 <article
-                className='rounded-2xl flex flex-col items-center'>
+                    className='rounded-2xl flex flex-col items-center'>
                     <h1 className='pt-2 pb-2 text-center text-2xl font-bold'>Projects</h1>
                     <section
-                    className='border overflow-y-scroll h-100 grid grid-flow-row grid-cols-1 gap-4 p-4
-                    bg-base-300'>
+                        className='border overflow-y-scroll h-100 bg-base-300
+                    grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4'>
                         {
                             projects.map(project => {
-                                return(
+                                return (
                                     <ProjectCard project={project} />
                                 )
                             })
