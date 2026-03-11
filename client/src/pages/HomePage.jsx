@@ -1,5 +1,5 @@
 import React from 'react'
-import { projects } from '../config/data'
+import {Link} from "react-router-dom"
 
 // component
 import ProjectCard from "../components/projectCard"
@@ -14,12 +14,15 @@ const HomePage = () => {
             className='h-screen'
             data-them="dark">
             <nav
-                className='w-full h-15 bg-base-300 flex items-center pl-3 pr-3'>
+                className='w-full h-15 bg-base-300 flex items-center justify-between pl-4 pr-4 sticky top-0 z-99'>
                 <div
                     className='LOGO text-2xl font-bold font-serif'>
                     <span>J'</span>
                     <span className='text-amber-600 italic'>Creative</span>
                 </div>
+                <Link
+                to={"/ProjectPage"}
+                className='text-lg font-semibold'>Projects</Link>
             </nav>
 
             <main>
@@ -27,19 +30,19 @@ const HomePage = () => {
                     className='HEART h-80 rounded-bl-4xl rounded-br-4xl relative flex flex-col items-center
                     bg-linear-to-b from-amber-500 to-orange-500'>
                     <section
-                        className='ProfileText text-center font-bold text-2xl absolute top-20'>
+                        className='name-intro text-center font-bold text-2xl absolute top-20'>
                         <p>- Hello -</p>
                         <p className='italic font-serif text-4xl'>- I', JMine212 -</p>
                     </section>
                     <section
-                        className='ProfileImg w-50 h-50 rounded-4xl absolute -bottom-12 border-3 border-pink-500
+                        className='J-box w-50 h-50 rounded-4xl absolute -bottom-12 border-3 border-pink-500
                         flex items-center justify-center bg-linear-to-b from-white to-stone-400'>
-                            <h1 className='text-9xl text-black font-bold font-serif'>J</h1>
-                        </section>
+                        <h1 className='text-9xl text-black font-bold font-serif'>J</h1>
+                    </section>
                 </article>
 
                 <article
-                    className='IntroBox p-4 mt-20'>
+                    className='IntroBox p-4 mt-15 relative'>
                     <h1 className='text-center text-2xl font-bold bg-base-300 pt-4 pb-4 rounded-2xl mb-2'>Hello, I’m **Jmine212** 👋</h1>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         I’m a <i className='font-semibold'> ** Junior Full-Stack Web Developer ** </i>
@@ -47,7 +50,9 @@ const HomePage = () => {
                         I focus on creating clean interfaces on the frontend and reliable
                         systems on the backend.</p>
                     <div
-                        className='mt-4'>
+                        className='mt-4 relative'>
+                        <div
+                            className='w-full h-40 bg-linear-to-b from-orange-400 absolute -z-10 top-0 left-0'></div>
                         <h1 className='text-center text-2xl font-bold'>💻 **My Skills**</h1>
                         <div className='flex justify-between pl-4 pr-4 mt-4'>
                             <span className='border p-2 rounded-box bg-base-300'>
@@ -63,12 +68,12 @@ const HomePage = () => {
                             </span>
                         </div>
                         <div className='border p-2 rounded-box bg-base-300 text-center mt-4'>
-                                <h3 className='text-xl font-semibold mb-2'>**Database**</h3>
-                                <p>* MongoDB</p>
-                            </div>
+                            <h3 className='text-xl font-semibold mb-2'>**Database**</h3>
+                            <p>* MongoDB</p>
+                        </div>
 
-                        <div className='border mt-4 text-center bg-base-300'>
-                            <h3 className='font-semibold mb-2'>🌏 **Languages**</h3>
+                        <div className='border mt-4 text-center rounded-2xl bg-base-300'>
+                            <h3 className='font-semibold mb-2 text-xl'>🌏 **Languages**</h3>
                             <p>* Shan (Tai)</p>
                             <p>* Thai</p>
                             <p>* English (B1–B2)</p>
@@ -81,22 +86,10 @@ const HomePage = () => {
                             and well-designed web applications.</p>
                         <p>Feel free to explore my projects and see what I’ve been working on.</p>
                     </div>
-                </article>
 
-                <article
-                    className='rounded-2xl flex flex-col items-center'>
-                    <h1 className='pt-2 pb-2 text-center text-2xl font-bold'>Projects</h1>
-                    <section
-                        className='border overflow-y-scroll h-100 bg-base-300
-                    grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4'>
-                        {
-                            projects.map(project => {
-                                return (
-                                    <ProjectCard project={project} />
-                                )
-                            })
-                        }
-                    </section>
+                    <div
+                        className='w-full h-40 bg-linear-to-b to-base-300 absolute -z-10 bottom-0 left-0
+                        rounded-bl-2xl rounded-br-2xl'></div>
                 </article>
             </main>
 

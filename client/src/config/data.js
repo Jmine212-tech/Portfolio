@@ -1,5 +1,5 @@
 export const projects = [
-    {id: 1, name: "name-1", script: "script-1", projectId: 1},
+    {id: 1, name: "Phone Service", script: "script-1", projectId: 1},
     {id: 2, name: "name-2", script: "script-2", projectId: 2},
     {id: 3, name: "name-3", script: "script-3", projectId: 3},
     {id: 4, name: "name-4", script: "script-4", projectId: 4},
